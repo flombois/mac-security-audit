@@ -12,7 +12,7 @@ setup_audit() {
   mkdir -p "$HOME"
   export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
   export GIT_CONFIG_NOSYSTEM=1
-  unset KUBECONFIG NO_COLOR
+  unset KUBECONFIG GNUPGHOME NO_COLOR
   source "$ROOT_DIR/lib/system.sh"
   source "$ROOT_DIR/lib/report.sh"
   source "$ROOT_DIR/$1"

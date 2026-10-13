@@ -111,6 +111,22 @@ given_ssh_key() {
   [[ "$(detail_of dev-tooling.ssh-authorized-keys)" == "2 key(s) in ~/.ssh/authorized_keys can log in when Remote Login is on" ]]
 }
 
+@test "GnuPG home readable by others fails" {
+  mkdir -m 755 "$HOME/.gnupg"
+
+  run check_dev_gnupg_dir
+
+  [[ "$(detail_of dev-tooling.gnupg-dir)" == "~/.gnupg has mode 755" ]]
+}
+
+@test "GnuPG home only readable by its owner passes" {
+  mkdir -m 700 "$HOME/.gnupg"
+
+  run check_dev_gnupg_dir
+
+  [[ "$(status_of dev-tooling.gnupg-dir)" == pass ]]
+}
+
 @test "plaintext git credential store fails" {
   git config --global credential.helper store
 

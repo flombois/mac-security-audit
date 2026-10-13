@@ -41,7 +41,7 @@ skipped otherwise. `softwareupdate -l` makes the platform section take about 30 
 | `network` | Firewall, stealth mode, sharing services (SSH, SMB, AFP, Screen Sharing, Remote Management), AirPlay Receiver, listeners reachable from the network, AirDrop, Docker ports on `0.0.0.0` |
 | `persistence` | Third-party launch agents and daemons: missing, unsigned or script programs; manual reviews of login items, privacy permissions, accessories and browser extensions |
 | `secrets` | Tokens, keys and passwords in shell dotfiles, `.npmrc`, `.netrc`, `.git-credentials`; static AWS keys; Docker logins outside the Keychain; plaintext Maven passwords; static kubeconfig credentials; OpenTofu/Terraform tokens; GitHub CLI token; gitleaks scan of repositories (opt-in) |
-| `dev-tooling` | `~/.ssh` and key permissions, keys without passphrase, weak keys, agent forwarding, `authorized_keys`, git credential helper and commit signing, outdated Homebrew packages and third-party taps, rootless Docker, risky container mounts, production kube contexts, Claude Code permissions and MCP servers, JetBrains trusted locations (manual) |
+| `dev-tooling` | `~/.ssh`, key and `~/.gnupg` permissions, keys without passphrase, weak keys, agent forwarding, `authorized_keys`, git credential helper and commit signing, outdated Homebrew packages and third-party taps, rootless Docker, risky container mounts, production kube contexts, Claude Code permissions and MCP servers, JetBrains trusted locations (manual) |
 | `backup` | Time Machine destination and latest backup age; encryption and restore test (manual) |
 
 Listening sockets come from `netstat`, which shows every user's sockets without root, unlike `lsof`.

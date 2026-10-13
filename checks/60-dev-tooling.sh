@@ -9,6 +9,7 @@ run_dev_tooling_checks() {
   check_dev_ssh_key_strength
   check_dev_ssh_agent_forwarding
   check_dev_ssh_authorized_keys
+  check_dev_gnupg_dir
   check_dev_git_credentials
   check_dev_git_signing
   check_dev_brew_outdated
@@ -117,6 +118,21 @@ check_dev_ssh_authorized_keys() {
     report_warn dev-tooling.ssh-authorized-keys "No keys allowed to log in to this Mac" \
       "$count key(s) in ~/.ssh/authorized_keys can log in when Remote Login is on" \
       "Remove keys you don't need"
+  fi
+}
+
+check_dev_gnupg_dir() {
+  local dir="${GNUPGHOME:-$HOME/.gnupg}" mode
+  if [[ ! -d "$dir" ]]; then
+    report_skip dev-tooling.gnupg-dir "GnuPG home only readable by you" "no $(tilde_path "$dir")"
+    return
+  fi
+  mode="$(file_mode "$dir")"
+  if [[ "$mode" == 700 ]]; then
+    report_pass dev-tooling.gnupg-dir "GnuPG home only readable by you"
+  else
+    report_fail dev-tooling.gnupg-dir "GnuPG home only readable by you" "$(tilde_path "$dir") has mode $mode" \
+      "Run: chmod -R go-rwx $(tilde_path "$dir")"
   fi
 }
 
