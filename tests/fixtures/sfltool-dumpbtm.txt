@@ -1,0 +1,157 @@
+========================
+ Records for UID -2 : FFFFEEEE-DDDD-CCCC-BBBB-AAAAFFFFFFFE
+========================
+
+ ServiceManagement migrated: true
+ LaunchServices registered: false
+
+ Items:
+
+ #1:
+                 UUID: 11111111-1111-1111-1111-111111111111
+                 Name: Example Corp
+       Developer Name: Example Corp
+                 Type: developer (0x20)
+                Flags: [  ] (0)
+          Disposition: [enabled, allowed, notified] (0xb)
+           Identifier: Example Corp
+                  URL: (null)
+           Generation: 0
+  Embedded Item Identifiers:
+    #1: 16.com.example.daemon
+
+ #2:
+                 UUID: 22222222-2222-2222-2222-222222222222
+                 Name: ExampleDaemon
+       Developer Name: Example Corp
+      Team Identifier: EXAMPLE123
+                 Type: legacy daemon (0x10010)
+                Flags: [ legacy ] (0x1)
+          Disposition: [enabled, allowed, notified] (0xb)
+           Identifier: 16.com.example.daemon
+                  URL: file:///Library/LaunchDaemons/com.example.daemon.plist
+      Executable Path: /bin/ls
+           Generation: 3
+    Parent Identifier: Example Corp
+
+ #3:
+                 UUID: 33333333-3333-3333-3333-333333333333
+                 Name: TeamsAgent
+       Developer Name: (null)
+      Team Identifier: TEAMS12345
+                 Type: daemon (0x10)
+                Flags: [  ] (0)
+          Disposition: [enabled, allowed, not notified] (0x3)
+           Identifier: 8.com.example.teams.agent
+                  URL: Contents/Library/LaunchDaemons/com.example.teams.agent.plist
+      Executable Path: /bin/ls
+           Generation: 1
+
+========================
+ Records for UID OTHER_UID : 88888888-8888-8888-8888-888888888888
+========================
+
+ ServiceManagement migrated: true
+ LaunchServices registered: true
+
+ Items:
+
+ #1:
+                 UUID: 44444444-4444-4444-4444-444444444444
+                 Name: OtherUserAgent
+       Developer Name: Other Corp
+                 Type: legacy agent (0x10008)
+                Flags: [ legacy ] (0x1)
+          Disposition: [enabled, allowed, notified] (0xb)
+           Identifier: 16.com.other.agent
+                  URL: file:///Users/other/Library/LaunchAgents/com.other.agent.plist
+      Executable Path: /Users/other/agent
+           Generation: 1
+
+========================
+ Records for UID CURRENT_UID : 99999999-9999-9999-9999-999999999999
+========================
+
+ ServiceManagement migrated: true
+ LaunchServices registered: true
+
+ Items:
+
+ #1:
+                 UUID: 55555555-5555-5555-5555-555555555555
+                 Name: ExampleHelper
+       Developer Name: Example Corp
+      Team Identifier: EXAMPLE123
+                 Type: login item (0x4)
+                Flags: [  ] (0)
+          Disposition: [enabled, allowed, notified] (0xb)
+           Identifier: 4.com.example.helper
+                  URL: Contents/Library/LoginItems/ExampleHelper.app
+    Bundle Identifier: com.example.helper
+           Generation: 2
+    Parent Identifier: 2.com.example.app
+
+ #2:
+                 UUID: 66666666-6666-6666-6666-666666666666
+                 Name: PasswordsMenuBarExtra
+       Developer Name: (null)
+                 Type: login item (0x4)
+                Flags: [  ] (0)
+          Disposition: [enabled, allowed, notified] (0xb)
+           Identifier: 4.com.apple.Passwords.MenuBarExtra
+                  URL: Contents/Library/LoginItems/PasswordsMenuBarExtra.app
+    Bundle Identifier: com.apple.Passwords.MenuBarExtra
+           Generation: 1
+    Parent Identifier: 2.com.apple.Passwords
+
+ #3:
+                 UUID: 77777777-7777-7777-7777-777777777777
+                 Name: SketchyAgent
+       Developer Name: (null)
+                 Type: agent (0x8)
+                Flags: [  ] (0)
+          Disposition: [enabled, allowed, notified] (0xb)
+           Identifier: 8.com.sketchy.agent
+                  URL: file:///Users/someone/Library/LaunchAgents/com.sketchy.agent.plist
+      Executable Path: /bin/cat
+           Generation: 1
+
+ #4:
+                 UUID: 88888888-0000-0000-0000-888888888888
+                 Name: DisabledAgent
+       Developer Name: Quiet Corp
+      Team Identifier: QUIET12345
+                 Type: legacy agent (0x10008)
+                Flags: [ legacy ] (0x1)
+          Disposition: [disabled, allowed, notified] (0xa)
+           Identifier: 16.com.quiet.agent
+                  URL: file:///Users/someone/Library/LaunchAgents/com.quiet.agent.plist
+      Executable Path: /Library/Quiet/Missing
+           Generation: 1
+
+ #5:
+                 UUID: 33333333-0000-0000-0000-333333333333
+                 Name: OldAgent
+       Developer Name: Gone Corp
+      Team Identifier: GONE456789
+                 Type: legacy agent (0x10008)
+                Flags: [ legacy ] (0x1)
+          Disposition: [enabled, allowed, notified] (0xb)
+           Identifier: 16.com.gone.agent
+                  URL: file:///Users/someone/Library/LaunchAgents/com.gone.agent.plist
+      Executable Path: /Library/Gone/OldAgent
+           Generation: 1
+
+ #6:
+                 UUID: 99999999-0000-0000-0000-999999999999
+                 Name: Example
+       Developer Name: Example Corp
+      Team Identifier: EXAMPLE123
+                 Type: app (0x2)
+                Flags: [  ] (0)
+          Disposition: [enabled, allowed, notified] (0xb)
+           Identifier: 2.com.example.app
+                  URL: file:///Applications/Example.app/
+           Generation: 0
+  Embedded Item Identifiers:
+    #1: 4.com.example.helper

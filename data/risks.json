@@ -1,0 +1,258 @@
+{
+  "platform.updates": {
+    "risk": "Pending updates often fix security flaws that are already public, and sometimes already exploited. Until they are installed, attackers can use the published details to target this Mac.",
+    "impact": "A malicious web page, document or network message can run code on the Mac or raise its privileges, with no mistake on your side."
+  },
+  "platform.security-responses": {
+    "risk": "Rapid Security Responses and system data files (XProtect, Gatekeeper rules) are how Apple ships urgent fixes and malware signatures between releases. With them off, those fixes wait for you.",
+    "impact": "Actively exploited flaws stay open, and known malware goes undetected for days or weeks longer."
+  },
+  "platform.auto-install": {
+    "risk": "macOS updates are installed only when someone remembers to, so the gap between a fix's release and its install grows.",
+    "impact": "The Mac stays exposed to publicly known vulnerabilities for longer."
+  },
+  "platform.filevault": {
+    "risk": "Without FileVault the disk can be read by anyone who has the Mac in hand: the login password does not protect data at rest.",
+    "impact": "A lost or stolen Mac exposes all files, browser sessions, SSH keys, tokens and source code to whoever holds it."
+  },
+  "platform.sip": {
+    "risk": "System Integrity Protection stops even root from changing system files, protected processes and kernel extensions. Without it, one root compromise can alter macOS itself.",
+    "impact": "Malware can hide in system files, inject code into protected apps, load kernel extensions and survive updates."
+  },
+  "platform.gatekeeper": {
+    "risk": "Gatekeeper checks that downloaded apps are signed and notarized before their first launch. Turned off, any downloaded program runs without that check.",
+    "impact": "A trojanized download runs as you, with access to your files and credentials."
+  },
+  "platform.startup-security": {
+    "risk": "Below Full Security, the Mac can boot older, vulnerable macOS versions and load third-party kernel extensions; Permissive Security also allows unsigned kernel code.",
+    "impact": "An attacker with admin rights or physical access can install a persistent, kernel-level backdoor."
+  },
+  "platform.xprotect": {
+    "risk": "XProtect is the malware scanner built into macOS; its definitions are how it learns about new malware. Old definitions miss recent malware families.",
+    "impact": "Recent malware, such as information stealers spread through fake apps, runs without being blocked."
+  },
+  "platform.app-signatures": {
+    "risk": "Unsigned, ad-hoc signed or Gatekeeper-rejected apps have no verified developer, and may have been modified after release.",
+    "impact": "A tampered or malicious app runs with your rights and can read your files and credentials."
+  },
+  "accounts.auto-login": {
+    "risk": "Automatic login opens your session at startup without a password, and it can't be used with FileVault.",
+    "impact": "Anyone who restarts the Mac gets your desktop, files, open sessions and saved sign-ins."
+  },
+  "accounts.guest": {
+    "risk": "The guest account lets anyone sign in without a password.",
+    "impact": "Someone with physical access gets a session to probe for local flaws, use your network or reach shared folders."
+  },
+  "accounts.screen-lock": {
+    "risk": "Without a password at once after sleep or the screen saver, an unattended Mac stays unlocked for a while.",
+    "impact": "Anyone passing by can use your open sessions: read mail, push code, approve sign-in prompts or copy files."
+  },
+  "accounts.touch-id-sudo": {
+    "risk": "Typing the admin password into terminals exposes it to shoulder surfing, terminal recordings and fake sudo prompts in malicious scripts.",
+    "impact": "A captured password gives full admin rights over the Mac."
+  },
+  "accounts.admin": {
+    "risk": "Working as an administrator lets any app or script you run gain admin rights with only your password, and you get used to approving prompts.",
+    "impact": "One approved prompt from malware gives it root: it can install persistent services, read other users' data and turn off protections."
+  },
+  "accounts.find-my": {
+    "risk": "Without Find My and Activation Lock, a lost Mac can't be located, locked or erased remotely, and a thief can erase and resell it.",
+    "impact": "A lost or stolen Mac can't be wiped remotely, which leaves its data at risk and makes theft more attractive."
+  },
+  "network.firewall": {
+    "risk": "With the application firewall off, every app and service listening on the network accepts connections from any network you join.",
+    "impact": "On café, hotel or conference Wi-Fi, others can reach dev servers, databases, sharing services and debuggers on the Mac."
+  },
+  "network.stealth-mode": {
+    "risk": "Without stealth mode, the Mac answers pings and probes of closed ports, which tells network scanners it is there.",
+    "impact": "The Mac is easier to discover and fingerprint on shared networks."
+  },
+  "network.sharing-services": {
+    "risk": "Remote Login, file sharing, Screen Sharing and Remote Management accept connections from the network, and are common targets of password guessing and exploits.",
+    "impact": "Someone who guesses or steals a password, or exploits the service, controls the Mac or reads its files remotely."
+  },
+  "network.airplay-receiver": {
+    "risk": "AirPlay Receiver keeps ports 5000 and 7000 open on all interfaces, for a service a work Mac rarely needs.",
+    "impact": "Others on the network can reach the service; flaws in it (AirBorne, 2025) have allowed code execution without a click."
+  },
+  "network.exposed-listeners": {
+    "risk": "Dev servers, databases and debuggers usually have no authentication and are meant for you only, but these listen on all interfaces. Vite's dev server, also behind VitePress, has had several flaws (2025) that let others on the network read any file on the Mac.",
+    "impact": "Anyone on the same network can read or change local data, run code through a debugger or reach admin consoles."
+  },
+  "network.airdrop": {
+    "risk": "AirDrop open to everyone lets any nearby device see your device name and send you files.",
+    "impact": "Strangers can push unsolicited or malicious files, and the device name can reveal who you are."
+  },
+  "network.docker-ports": {
+    "risk": "Docker publishes ports on all interfaces by default, so container services accept connections from the whole network, not only from this Mac.",
+    "impact": "Databases and services in containers, often with default passwords, are open to anyone on the network."
+  },
+  "network.remote-access": {
+    "risk": "Remote access tools give full control of the Mac to whoever holds their credentials, and are a favourite of support scams and attackers.",
+    "impact": "A stolen account or a social engineering call gives someone your screen, keyboard and files."
+  },
+  "network.running-tunnels": {
+    "risk": "A tunnel (ngrok, cloudflared…) puts a local service on the internet, past the firewall, often without authentication.",
+    "impact": "Anyone who finds or guesses the URL reaches the service behind it, with its data and admin pages."
+  },
+  "network.trusted-certificates": {
+    "risk": "A trusted HTTPS proxy root certificate lets whoever holds its private key impersonate any website to this Mac, and that key sits on disk.",
+    "impact": "Malware or a copy of the key can read and change all HTTPS traffic, passwords and tokens included, without a warning."
+  },
+  "persistence.launch-items": {
+    "risk": "Launch agents and daemons start programs at login or boot. Missing, unsigned or script programs are typical of leftovers and of malware persistence.",
+    "impact": "A malicious item runs again at every start, as you or as root; a leftover that points to a writable path can be hijacked."
+  },
+  "persistence.login-items": {
+    "risk": "Background items without a known Team ID, or left behind by removed apps, run at every login with little visibility.",
+    "impact": "Unwanted or malicious software keeps running in the background after each restart."
+  },
+  "persistence.browser-extensions": {
+    "risk": "Extensions loaded from a folder skip the store's review and never update, and extensions can read and change every page you visit.",
+    "impact": "A malicious or outdated extension can steal session cookies, passwords and page content, from your work tools too."
+  },
+  "persistence.privacy-permissions": {
+    "risk": "Full Disk Access, Accessibility, Input Monitoring and Screen Recording let an app read all your files, control other apps, log keystrokes or capture the screen.",
+    "impact": "An app you no longer use, or one that gets compromised, keeps that access silently."
+  },
+  "persistence.accessories": {
+    "risk": "Accessories that connect without asking can act as keyboards or network adapters as soon as they are plugged in.",
+    "impact": "A malicious cable or device can type commands or intercept network traffic."
+  },
+  "secrets.dotfiles": {
+    "risk": "Secrets in shell and tool dotfiles are plaintext, readable by any program you run, and often end up in backups, dotfile repositories and screen shares.",
+    "impact": "A leaked token gives access to its service (cloud, GitHub, registries) until it is rotated."
+  },
+  "secrets.netrc": {
+    "risk": "~/.netrc keeps passwords in plaintext, readable by any program you run, and tools send them automatically.",
+    "impact": "Anyone who reads the file gets those accounts."
+  },
+  "secrets.aws": {
+    "risk": "Static access keys in ~/.aws/credentials never expire and work from anywhere.",
+    "impact": "A copied key gives access to your AWS accounts, with your permissions, until someone notices and revokes it."
+  },
+  "secrets.docker": {
+    "risk": "Without a credential store, Docker keeps registry logins base64-encoded, which is plaintext, in ~/.docker/config.json.",
+    "impact": "Anyone who reads the file can pull, and often push, images in your registries: a path to supply chain attacks."
+  },
+  "secrets.maven": {
+    "risk": "Plaintext passwords in ~/.m2/settings.xml can be read by any build you run, including the plugins of the projects you build.",
+    "impact": "A malicious dependency or plugin can steal repository credentials and publish artifacts in your name."
+  },
+  "secrets.gradle": {
+    "risk": "gradle.properties can't read environment variables, so passwords and tokens there sit in plaintext, readable by every build you run and by its plugins. React Native's release guide puts the upload keystore passwords there.",
+    "impact": "A malicious dependency or Gradle plugin can steal signing passwords and repository tokens, and publish artifacts or app builds in your name."
+  },
+  "secrets.kube": {
+    "risk": "Static tokens and client keys in kubeconfig files don't expire and work from any machine.",
+    "impact": "A copied kubeconfig gives cluster access with your rights, often cluster-admin, until the credential is revoked."
+  },
+  "secrets.terraform": {
+    "risk": "Registry API tokens in credentials.tfrc.json are plaintext and long-lived.",
+    "impact": "A leaked token gives access to your HCP Terraform or registry workspaces, with their state and secrets."
+  },
+  "secrets.gh": {
+    "risk": "The GitHub CLI token in hosts.yml is plaintext and usually has broad scopes (repo, workflow).",
+    "impact": "Whoever reads it can read and push to your repositories and change their workflows, until the token is revoked."
+  },
+  "secrets.cli-logins": {
+    "risk": "Vercel, Netlify, Firebase, Wrangler, Expo, Fly.io and other CLIs keep their login token in a file, and App Store Connect API keys are files too. When other accounts on the Mac can read them, the tokens are no longer yours only.",
+    "impact": "Anyone who reads them can deploy to your sites and apps, read their environment variables and secrets, or publish app builds."
+  },
+  "secrets.ssh-dir": {
+    "risk": "If others can read or write ~/.ssh, they can read keys or add entries to authorized_keys and config.",
+    "impact": "Another local account or process can take your SSH identity or redirect your connections."
+  },
+  "secrets.ssh-key-permissions": {
+    "risk": "Private keys readable by others can be copied by any local account, and ssh refuses to use them.",
+    "impact": "A copied key logs in to every server and Git host that trusts it."
+  },
+  "secrets.ssh-key-passphrases": {
+    "risk": "A private key without a passphrase works for anyone who copies the file: malware, a backup, a stolen disk.",
+    "impact": "The copy logs in to every server and Git host that trusts the key, with no other secret needed."
+  },
+  "secrets.ssh-key-strength": {
+    "risk": "DSA and short RSA keys use weak or deprecated algorithms, which modern servers reject and which may be breakable.",
+    "impact": "A broken key gives access to the servers that trust it."
+  },
+  "secrets.ssh-agent-forwarding": {
+    "risk": "ForwardAgent for every host lets any server you connect to use your SSH agent while you are logged in.",
+    "impact": "A compromised or malicious server can use your keys to log in to other servers and Git hosts as you."
+  },
+  "secrets.ssh-authorized-keys": {
+    "risk": "Keys in ~/.ssh/authorized_keys log in to this Mac without a password when Remote Login is on.",
+    "impact": "Anyone holding one of those private keys gets a shell as you."
+  },
+  "secrets.gnupg-dir": {
+    "risk": "A GnuPG home that others can read exposes your private keys and trust database.",
+    "impact": "Others can copy your keys to decrypt your mail and files, or sign commits and packages as you."
+  },
+  "dev-tooling.git-credentials": {
+    "risk": "The store credential helper writes Git passwords and tokens in plaintext to ~/.git-credentials.",
+    "impact": "Any program or person that reads the file gets push access to your repositories."
+  },
+  "dev-tooling.git-signing": {
+    "risk": "Unsigned commits can't be told apart from commits someone else made with your name and email.",
+    "impact": "A stolen token or a compromised machine can push commits that look like yours."
+  },
+  "dev-tooling.brew-outdated": {
+    "risk": "Outdated Homebrew packages include tools and libraries with known, fixed vulnerabilities (OpenSSL, curl, git…).",
+    "impact": "Those flaws can be exploited through the files, repositories and servers you work with."
+  },
+  "dev-tooling.docker-rootless": {
+    "risk": "The Docker daemon runs as root in its VM, so a container escape gets root there, over every container, image and volume.",
+    "impact": "One malicious image can reach other containers' data and the folders shared from the Mac."
+  },
+  "dev-tooling.docker-mounts": {
+    "risk": "Containers that mount your home folder or the Docker socket can read your keys and tokens, or start new privileged containers.",
+    "impact": "A compromised container can take over your files, your credentials and the Docker host."
+  },
+  "dev-tooling.kube-contexts": {
+    "risk": "Production contexts on a dev machine make it easy to run a command against the wrong cluster, and put production credentials within reach of anything you run.",
+    "impact": "A typo or a malicious script can change or delete production workloads."
+  },
+  "dev-tooling.claude-permissions": {
+    "risk": "Broad permissions or bypass mode let the agent run commands and edit files without asking, also when a prompt injection in a file or web page steers it.",
+    "impact": "An injected instruction can leak secrets, delete files or push code before you see it."
+  },
+  "dev-tooling.ide-trusted-locations": {
+    "risk": "Projects in a trusted location run their build scripts (Gradle, Maven, npm) when opened, without the trust prompt. Trusting your home folder trusts every repository you clone.",
+    "impact": "Opening a malicious repository runs its code on your Mac at once."
+  },
+  "dev-tooling.ide-plugins": {
+    "risk": "IDE plugins run with your rights and see your code and credentials; unknown or unmaintained ones are a supply chain risk.",
+    "impact": "A malicious plugin can steal code, tokens and keys."
+  },
+  "dev-tooling.runtime-support": {
+    "risk": "End-of-life runtimes get no more security fixes, so new vulnerabilities in them stay open for good.",
+    "impact": "Apps and tools running on them can be attacked through flaws that will never be patched."
+  },
+  "dev-tooling.vscode-workspace-trust": {
+    "risk": "With workspace trust off, VS Code runs a folder's tasks, debug configurations and extensions' workspace code without asking.",
+    "impact": "Opening a malicious repository runs its code on your Mac at once."
+  },
+  "dev-tooling.npm-config": {
+    "risk": "With certificate checks off or an http registry, packages are downloaded without proof of where they come from. With install scripts on, every package you install, and every dependency of it, runs code on your Mac; the 2025 npm worms (Shai-Hulud…) spread this way.",
+    "impact": "A network attacker can swap packages in transit, and one compromised dependency can steal your tokens and SSH keys and publish itself through your npm account."
+  },
+  "dev-tooling.debug-ports": {
+    "risk": "A browser started with --remote-debugging-port, or Node with --inspect, lets any program on the Mac drive it through a debugging port. Infostealers start Chrome this way to read its cookies without the Keychain prompt.",
+    "impact": "Any local program can read and use your browser sessions and cookies, or run code inside the Node process with its access."
+  },
+  "backup.destination": {
+    "risk": "Without a backup, a disk failure, theft, ransomware or a mistake loses data for good.",
+    "impact": "Work that is not pushed or synced anywhere is lost, and ransomware leaves no way back."
+  },
+  "backup.latest": {
+    "risk": "The latest backup is old, so nothing since then is protected.",
+    "impact": "A failure, theft or ransomware today loses all the work since that backup."
+  },
+  "backup.encryption": {
+    "risk": "An unencrypted backup disk holds a full copy of your data that anyone can read, and a single copy kept with the Mac is lost with it in a fire or burglary.",
+    "impact": "A stolen backup disk exposes everything FileVault protects on the Mac."
+  },
+  "backup.restore-test": {
+    "risk": "Backups that were never restored may be incomplete or unreadable, and you only find out when you need them.",
+    "impact": "Data you thought was safe can be lost after a failure."
+  }
+}

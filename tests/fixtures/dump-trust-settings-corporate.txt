@@ -1,0 +1,3 @@
+Number of trusted certs = 1
+Cert 0: Example Corp Root CA
+   Number of trust settings : 0

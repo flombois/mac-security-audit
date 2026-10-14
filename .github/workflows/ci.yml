@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+
+      - name: Install tools
+        run: brew install shellcheck bats-core
+
+      - name: Lint
+        run: shellcheck audit.sh lib/*.sh checks/*.sh
+
+      - name: Test
+        run: bats tests/
+
+      - name: Smoke run
+        run: |
+          status=0
+          ./audit.sh --no-color --json >report.json || status=$?
+          [ "$status" -le 1 ]
+          jq -e '.checks | length > 0' report.json

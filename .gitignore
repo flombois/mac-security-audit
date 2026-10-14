@@ -1,0 +1,13 @@
+# JetBrains IDEs
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Audit reports describe this machine's security posture
+reports/
+
+# Local environment
+.env
+.env.*

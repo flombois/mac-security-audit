@@ -1,0 +1,312 @@
+# Software the audit lists, by category. Find it by app:<bundle id glob>, name:<app file name glob>,
+# cmd:<command on PATH> or path:<file or folder, ~ for home>. The first match of a name wins.
+# category	name	finder
+browsers	Safari	app:com.apple.Safari
+browsers	Google Chrome	app:com.google.Chrome
+browsers	Google Chrome Beta	app:com.google.Chrome.beta
+browsers	Google Chrome Dev	app:com.google.Chrome.dev
+browsers	Google Chrome Canary	app:com.google.Chrome.canary
+browsers	Firefox	app:org.mozilla.firefox
+browsers	Firefox Developer Edition	app:org.mozilla.firefoxdeveloperedition
+browsers	Firefox Nightly	app:org.mozilla.nightly
+browsers	Microsoft Edge	app:com.microsoft.edgemac
+browsers	Microsoft Edge Beta	app:com.microsoft.edgemac.Beta
+browsers	Microsoft Edge Dev	app:com.microsoft.edgemac.Dev
+browsers	Brave	app:com.brave.Browser
+browsers	Brave Beta	app:com.brave.Browser.beta
+browsers	Brave Nightly	app:com.brave.Browser.nightly
+browsers	Arc	app:company.thebrowser.Browser
+browsers	Dia	app:company.thebrowser.dia
+browsers	Vivaldi	app:com.vivaldi.Vivaldi
+browsers	Opera	app:com.operasoftware.Opera
+browsers	Opera GX	app:com.operasoftware.OperaGX
+browsers	Chromium	app:org.chromium.Chromium
+browsers	Orion	app:com.kagi.kagimacOS
+browsers	Zen	app:app.zen-browser.zen
+browsers	DuckDuckGo	app:com.duckduckgo.macos.browser
+browsers	Tor Browser	app:org.torproject.torbrowser
+browsers	Waterfox	name:Waterfox
+browsers	LibreWolf	name:LibreWolf
+browsers	Polypane	name:Polypane
+browsers	Responsively	name:ResponsivelyApp
+browsers	Sizzy	name:Sizzy
+browsers	Playwright browsers	path:~/Library/Caches/ms-playwright
+browsers	Puppeteer browsers	path:~/.cache/puppeteer
+browsers	Cypress	path:~/Library/Caches/Cypress
+password-managers	1Password	app:com.1password.1password
+password-managers	1Password 7	app:com.agilebits.onepassword7
+password-managers	Bitwarden	app:com.bitwarden.desktop
+password-managers	KeePassXC	app:org.keepassxc.keepassxc
+password-managers	Strongbox	name:Strongbox
+password-managers	Proton Pass	name:Proton Pass
+password-managers	Enpass	name:Enpass
+password-managers	Keeper	name:Keeper Password Manager
+password-managers	Dashlane	name:Dashlane
+password-managers	NordPass	name:NordPass
+password-managers	LastPass	name:LastPass
+password-managers	1Password CLI	cmd:op
+password-managers	Bitwarden CLI	cmd:bw
+password-managers	pass	cmd:pass
+password-managers	gopass	cmd:gopass
+package-managers	Homebrew	cmd:brew
+package-managers	MacPorts	cmd:port
+package-managers	Nix	cmd:nix
+package-managers	mise	cmd:mise
+package-managers	asdf	cmd:asdf
+package-managers	SDKMAN	path:~/.sdkman
+package-managers	nvm	path:~/.nvm
+package-managers	fnm	cmd:fnm
+package-managers	Volta	cmd:volta
+package-managers	pyenv	cmd:pyenv
+package-managers	rbenv	cmd:rbenv
+package-managers	rvm	path:~/.rvm
+package-managers	goenv	cmd:goenv
+package-managers	rustup	path:~/.rustup
+package-managers	conda	cmd:conda
+package-managers	Miniconda	path:~/miniconda3
+package-managers	Anaconda	path:~/anaconda3
+package-managers	Miniforge	path:~/miniforge3
+package-managers	pipx	cmd:pipx
+package-managers	uv	cmd:uv
+package-managers	Poetry	cmd:poetry
+package-managers	PDM	cmd:pdm
+package-managers	Hatch	cmd:hatch
+package-managers	npm	cmd:npm
+package-managers	pnpm	cmd:pnpm
+package-managers	Yarn	cmd:yarn
+package-managers	Bun	cmd:bun
+package-managers	Deno	cmd:deno
+package-managers	Cargo	cmd:cargo
+package-managers	CocoaPods	cmd:pod
+package-managers	Carthage	cmd:carthage
+package-managers	Mint	cmd:mint
+package-managers	Corepack	cmd:corepack
+package-managers	nodenv	cmd:nodenv
+package-managers	n	cmd:n
+ides	JetBrains	app:com.jetbrains.*
+ides	Android Studio	app:com.google.android.studio*
+ides	Xcode	app:com.apple.dt.Xcode
+ides	Visual Studio Code	app:com.microsoft.VSCode
+ides	Visual Studio Code Insiders	app:com.microsoft.VSCodeInsiders
+ides	VSCodium	app:com.vscodium
+ides	Cursor	app:com.todesktop.230313mzl4w4u92
+ides	Windsurf	app:com.exafunction.windsurf
+ides	Zed	app:dev.zed.Zed*
+ides	Sublime Text	app:com.sublimetext.*
+ides	Nova	app:com.panic.Nova
+ides	BBEdit	app:com.barebones.bbedit
+ides	CotEditor	app:com.coteditor.CotEditor
+ides	Eclipse	app:org.eclipse.*
+ides	NetBeans	name:*NetBeans*
+ides	Qt Creator	app:org.qt-project.qtcreator
+ides	Spyder	name:Spyder*
+ides	JupyterLab	name:JupyterLab
+ides	Emacs	app:org.gnu.Emacs
+ides	MacVim	app:org.vim.MacVim
+ides	Kiro	name:Kiro
+ides	Positron	name:Positron
+ides	Neovim	cmd:nvim
+ides	Vim	path:/opt/homebrew/bin/vim
+ides	Vim	path:/usr/local/bin/vim
+ides	Emacs	cmd:emacs
+ides	Helix	cmd:hx
+ides	micro	cmd:micro
+ides	Jupyter	cmd:jupyter
+build-tools	Maven	cmd:mvn
+build-tools	Gradle	cmd:gradle
+build-tools	sbt	cmd:sbt
+build-tools	Ant	cmd:ant
+build-tools	CMake	cmd:cmake
+build-tools	Ninja	cmd:ninja
+build-tools	Meson	cmd:meson
+build-tools	Bazel	cmd:bazel
+build-tools	Bazelisk	cmd:bazelisk
+build-tools	Buck2	cmd:buck2
+build-tools	GNU Make	cmd:gmake
+build-tools	Autoconf	cmd:autoconf
+build-tools	pkg-config	cmd:pkg-config
+build-tools	Conan	cmd:conan
+build-tools	vcpkg	cmd:vcpkg
+build-tools	ccache	cmd:ccache
+build-tools	sccache	cmd:sccache
+build-tools	Just	cmd:just
+build-tools	Task	cmd:task
+build-tools	Vite	cmd:vite
+build-tools	VitePress	cmd:vitepress
+build-tools	webpack	cmd:webpack
+build-tools	esbuild	cmd:esbuild
+build-tools	Rollup	cmd:rollup
+build-tools	Parcel	cmd:parcel
+build-tools	Turborepo	cmd:turbo
+build-tools	Nx	cmd:nx
+build-tools	Lerna	cmd:lerna
+build-tools	TypeScript	cmd:tsc
+build-tools	Angular CLI	cmd:ng
+build-tools	Vue CLI	cmd:vue
+build-tools	Nuxt	cmd:nuxi
+containers-vms	Docker	app:com.docker.docker
+containers-vms	OrbStack	app:dev.kdrag0n.MacVirt
+containers-vms	Podman Desktop	app:io.podman_desktop.PodmanDesktop
+containers-vms	Rancher Desktop	app:io.rancherdesktop.app
+containers-vms	UTM	app:com.utmapp.UTM
+containers-vms	Parallels Desktop	app:com.parallels.desktop.console
+containers-vms	VMware Fusion	app:com.vmware.fusion
+containers-vms	VirtualBox	app:org.virtualbox.app.VirtualBox
+containers-vms	Docker	cmd:docker
+containers-vms	Colima	cmd:colima
+containers-vms	Podman	cmd:podman
+containers-vms	Lima	cmd:limactl
+containers-vms	Multipass	cmd:multipass
+containers-vms	Vagrant	cmd:vagrant
+containers-vms	Tart	cmd:tart
+containers-vms	nerdctl	cmd:nerdctl
+cloud-cli	aws	cmd:aws
+cloud-cli	gcloud	cmd:gcloud
+cloud-cli	az	cmd:az
+cloud-cli	doctl	cmd:doctl
+cloud-cli	oci	cmd:oci
+cloud-cli	kubectl	cmd:kubectl
+cloud-cli	helm	cmd:helm
+cloud-cli	k9s	cmd:k9s
+cloud-cli	kind	cmd:kind
+cloud-cli	minikube	cmd:minikube
+cloud-cli	kubectx	cmd:kubectx
+cloud-cli	tofu	cmd:tofu
+cloud-cli	terraform	cmd:terraform
+cloud-cli	terragrunt	cmd:terragrunt
+cloud-cli	pulumi	cmd:pulumi
+cloud-cli	vercel	cmd:vercel
+cloud-cli	netlify	cmd:netlify
+cloud-cli	flyctl	cmd:flyctl
+cloud-cli	firebase	cmd:firebase
+cloud-cli	wrangler	cmd:wrangler
+cloud-cli	heroku	cmd:heroku
+cloud-cli	eksctl	cmd:eksctl
+cloud-cli	argocd	cmd:argocd
+cloud-cli	flux	cmd:flux
+cloud-cli	istioctl	cmd:istioctl
+cloud-cli	linkerd	cmd:linkerd
+cloud-cli	vault	cmd:vault
+cloud-cli	packer	cmd:packer
+cloud-cli	ansible	cmd:ansible
+cloud-cli	gh	cmd:gh
+cloud-cli	glab	cmd:glab
+cloud-cli	supabase	cmd:supabase
+cloud-cli	amplify	cmd:amplify
+cloud-cli	railway	cmd:railway
+cloud-cli	sentry-cli	cmd:sentry-cli
+ai-tools	Claude	app:com.anthropic.claudefordesktop
+ai-tools	ChatGPT	app:com.openai.chat
+ai-tools	Ollama	app:com.electron.ollama
+ai-tools	LM Studio	app:ai.elementlabs.lmstudio
+ai-tools	Jan	name:Jan
+ai-tools	Msty	name:Msty
+ai-tools	GitHub Copilot for Xcode	name:GitHub Copilot for Xcode
+ai-tools	Claude Code	cmd:claude
+ai-tools	Claude Code URL Handler	app:com.anthropic.claude-code-url-handler
+ai-tools	Codex CLI	cmd:codex
+ai-tools	Gemini CLI	cmd:gemini
+ai-tools	Aider	cmd:aider
+ai-tools	Ollama	cmd:ollama
+ai-tools	Goose	cmd:goose
+ai-tools	opencode	cmd:opencode
+ai-tools	GitHub Copilot CLI	cmd:copilot
+ai-tools	Cursor Agent	cmd:cursor-agent
+ai-tools	Amp	cmd:amp
+api-clients	Postman	app:com.postmanlabs.mac
+api-clients	Insomnia	app:com.insomnia.app
+api-clients	Bruno	app:com.usebruno.app
+api-clients	Hoppscotch	name:Hoppscotch
+api-clients	RapidAPI	name:RapidAPI
+api-clients	Paw	name:Paw
+api-clients	HTTPie	name:HTTPie
+api-clients	Yaak	name:Yaak
+api-clients	HTTPie CLI	cmd:http
+api-clients	Hurl	cmd:hurl
+mobile-dev	Flipper	name:Flipper
+mobile-dev	Reactotron	name:Reactotron
+mobile-dev	React Native Debugger	name:React Native Debugger
+mobile-dev	Android SDK	path:~/Library/Android/sdk
+mobile-dev	adb	cmd:adb
+mobile-dev	Watchman	cmd:watchman
+mobile-dev	Expo CLI	cmd:expo
+mobile-dev	EAS CLI	cmd:eas
+mobile-dev	fastlane	cmd:fastlane
+mobile-dev	Maestro	cmd:maestro
+security-software	CrowdStrike Falcon	app:com.crowdstrike.falcon.*
+security-software	SentinelOne	app:com.sentinelone.*
+security-software	Microsoft Defender	app:com.microsoft.wdav*
+security-software	Sophos	app:com.sophos.*
+security-software	Bitdefender	app:com.bitdefender.*
+security-software	ESET	app:com.eset.*
+security-software	Malwarebytes	app:com.malwarebytes.*
+security-software	Jamf Protect	app:com.jamf.protect*
+security-software	Kandji	app:io.kandji.*
+security-software	Trend Micro	app:com.trendmicro.*
+security-software	Avast	app:com.avast.*
+security-software	Norton	app:com.symantec.*
+security-software	Intego	app:com.intego.*
+security-software	Little Snitch	app:at.obdev.littlesnitch*
+security-software	Objective-See	app:com.objective-see.*
+security-software	Radio Silence	name:Radio Silence
+security-software	Santa	name:Santa
+remote-access	TeamViewer	app:com.teamviewer.*
+remote-access	AnyDesk	app:com.philandro.anydesk
+remote-access	RustDesk	app:com.carriez.rustdesk
+remote-access	Splashtop	app:com.splashtop.*
+remote-access	Parsec	app:tv.parsec.www
+remote-access	ScreenConnect	name:*ScreenConnect*
+remote-access	ScreenConnect	name:connectwisecontrol-*
+remote-access	LogMeIn	app:com.logmein.*
+remote-access	GoTo Resolve	name:GoTo Resolve*
+remote-access	Jump Desktop Connect	name:Jump Desktop Connect
+remote-access	Chrome Remote Desktop	path:/Library/LaunchAgents/org.chromium.chromoting.plist
+vpn-tunnels	Ivanti Secure Access	app:net.pulsesecure.Pulse-Secure
+vpn-tunnels	Tailscale	app:io.tailscale.ipn.*
+vpn-tunnels	WireGuard	app:com.wireguard.macos
+vpn-tunnels	Proton VPN	app:ch.protonvpn.mac
+vpn-tunnels	Cisco Secure Client	name:Cisco Secure Client*
+vpn-tunnels	Cisco AnyConnect	name:Cisco AnyConnect*
+vpn-tunnels	GlobalProtect	app:com.paloaltonetworks.GlobalProtect*
+vpn-tunnels	Cloudflare WARP	app:com.cloudflare.1dot1dot1dot1.macos
+vpn-tunnels	OpenVPN Connect	name:OpenVPN Connect
+vpn-tunnels	Tunnelblick	app:net.tunnelblick.tunnelblick
+vpn-tunnels	ZeroTier	name:ZeroTier*
+vpn-tunnels	NordVPN	name:NordVPN*
+vpn-tunnels	Mullvad VPN	name:Mullvad VPN
+vpn-tunnels	FortiClient	name:FortiClient*
+vpn-tunnels	Twingate	name:Twingate
+vpn-tunnels	NetBird	name:NetBird*
+vpn-tunnels	Tailscale	cmd:tailscale
+vpn-tunnels	ngrok	cmd:ngrok
+vpn-tunnels	cloudflared	cmd:cloudflared
+vpn-tunnels	zrok	cmd:zrok
+vpn-tunnels	bore	cmd:bore
+vpn-tunnels	WireGuard tools	cmd:wg
+vpn-tunnels	OpenVPN	cmd:openvpn
+vpn-tunnels	localtunnel	cmd:lt
+proxy-tools	Charles	app:com.xk72.Charles
+proxy-tools	Proxyman	app:com.proxyman.NSProxy
+proxy-tools	HTTP Toolkit	name:HTTP Toolkit
+proxy-tools	Burp Suite	name:Burp Suite*
+proxy-tools	Fiddler Everywhere	name:Fiddler Everywhere
+proxy-tools	Wireshark	app:org.wireshark.Wireshark
+proxy-tools	mitmproxy	cmd:mitmproxy
+proxy-tools	mitmproxy	cmd:mitmweb
+local-servers	Postgres.app	app:com.postgresapp.Postgres*
+local-servers	DBngin	name:DBngin
+local-servers	Herd	name:Herd
+local-servers	MAMP	name:MAMP*
+local-servers	Local	name:Local
+local-servers	Laragon	name:Laragon
+local-servers	Redis Insight	name:Redis Insight
+cloud-sync	Dropbox	app:com.getdropbox.dropbox
+cloud-sync	Google Drive	app:com.google.drivefs
+cloud-sync	OneDrive	app:com.microsoft.OneDrive
+cloud-sync	Box Drive	app:com.box.desktop
+cloud-sync	pCloud Drive	name:pCloud Drive
+cloud-sync	MEGA	name:MEGA*
+cloud-sync	Nextcloud	app:com.nextcloud.desktopclient
+cloud-sync	Synology Drive	name:Synology Drive*
+cloud-sync	Sync.com	name:Sync
+cloud-sync	Proton Drive	name:Proton Drive

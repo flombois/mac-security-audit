@@ -1,0 +1,7 @@
+4 extension(s)
+--- com.apple.system_extension.network_extension (Go to 'System Settings > General > Login Items & Extensions > Network Extensions' to modify these system extension(s))
+enabled	active	teamID	bundleID (version)	name	[state]
+		EXAMPLE123	com.example.security.network-extension (2.1.0/210)	network-ext	[terminated waiting to uninstall on reboot]
+*	*	EXAMPLE123	com.example.security.network-extension (2.1.1/211)	network-ext	[activated enabled]
+		EXAMPLE123	com.example.security.network-extension (2.0.9/209)	network-ext	[terminated waiting to uninstall on reboot]
+	*	EXAMPLE456	com.example.vpn.transparent-proxy (1.4.0/140)	Example VPN Split Tunneling	[activated waiting for user]

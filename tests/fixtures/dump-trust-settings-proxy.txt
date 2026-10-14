@@ -1,0 +1,7 @@
+Number of trusted certs = 1
+Cert 0: Charles Proxy CA (13 Oct 2026, example-mac)
+   Number of trust settings : 10
+   Trust Setting 0:
+      Policy OID            : SSL
+      Allowed Error         : 0x80012407
+      Result Type           : kSecTrustSettingsResultTrustRoot

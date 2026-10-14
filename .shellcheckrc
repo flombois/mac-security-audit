@@ -1,0 +1,4 @@
+shell=bash
+external-sources=true
+# Messages name paths like ~/.ssh on purpose.
+disable=SC2088
