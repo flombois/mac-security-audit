@@ -263,3 +263,7 @@ bats tests/
   command.
 - `lib/browse.sh` holds the `--interactive` browser; fzf runs it again for the list, preview and full view.
 - Tests put stub commands first in `PATH` and `AUDIT_SYSTEM_PATH`, and use a throwaway `HOME`; see `tests/test_helper.bash`.
+
+## License
+
+[GPL-3.0](LICENSE)
