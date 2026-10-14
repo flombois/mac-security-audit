@@ -1,12 +1,12 @@
 name: False positive
-description: "Incorrectly reported: a check fails although the weakness it looks for isn't there."
+description: "Incorrectly reported: a check fails although the weakness it looks for isn't present."
 title: "False positive: "
 labels: [bug]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form when a check fails on a Mac where the weakness it looks for isn't there. If the audit
+        Use this form when a check fails on a Mac where the weakness it looks for isn't present. If the audit
         changed something on your Mac, printed a secret value or ran something as root that it shouldn't,
         don't open an issue: report it privately, as `SECURITY.md` explains.
 

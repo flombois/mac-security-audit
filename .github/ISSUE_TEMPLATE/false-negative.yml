@@ -1,12 +1,12 @@
 name: False negative
-description: "Not reported: a check passes although the weakness it looks for is there."
+description: "Not reported: a check passes although the weakness it looks for is present."
 title: "False negative: "
 labels: [bug]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form when a check passes on a Mac where the weakness it looks for is there. For a weakness no
+        Use this form when a check passes on a Mac where the weakness it looks for is present. For a weakness no
         check looks for yet, use the **New check** form. If the audit changed something on your Mac, printed a secret
         value or ran something as root that it shouldn't, don't open an issue: report it privately, as
         `SECURITY.md` explains.
