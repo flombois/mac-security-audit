@@ -21,4 +21,5 @@ The audit is meant to be read-only and never to print secret values. These count
 - text from the audited Mac (app or file names…) that can run or inject anything in the terminal;
 - a command that runs as root beyond what `run_root_check` queues, or that prompts for a password.
 
-A check that misses a weakness, or reports a false positive, is a normal bug: open an issue.
+A check that misses a weakness, or reports a false positive, is a normal bug: open an issue with the
+**False negative** or **False positive** form.

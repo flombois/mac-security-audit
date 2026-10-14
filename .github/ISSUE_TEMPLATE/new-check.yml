@@ -1,0 +1,35 @@
+name: New check
+description: Suggest a weakness the audit should look for.
+title: "New check: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The audit is read-only: a check can read settings, files and command output, but never change them,
+        and never print a secret value.
+
+  - type: textarea
+    id: weakness
+    attributes:
+      label: The weakness
+      description: What is wrong, and what an attacker or an accident could do with it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: detection
+    attributes:
+      label: How to detect it, read-only
+      description: The commands or files that show it, with the output for both a weak and a safe setting. Say if it needs root.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: fix
+    attributes:
+      label: The fix
+      description: What the user should change, such as a path in System Settings or a command.
+    validations:
+      required: true
